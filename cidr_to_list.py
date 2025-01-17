@@ -1,6 +1,6 @@
 import ipaddress
 
-cidr_range = '20.26.156.215'
+cidr_range = ''
 
 ip_list = [str(ip) for ip in ipaddress.IPv4Network(cidr_range)]
 

@@ -1,4 +1,3 @@
-# TODO accept cidr ranges - split on : to remove port info then check for a slash
 import ipaddress
 
 def checkIPs():
@@ -11,7 +10,7 @@ def checkIPs():
             counter += 1
             port_removed = line.split(':')[0]
 
-            cidr_split = [str(ip) for ip in ipaddress.IPv4Network(port_removed)]
+            cidr_split = [str(ip) for ip in ipaddress.IPv4Network(port_removed.strip())]
 
             for ip_add in cidr_split:
 
